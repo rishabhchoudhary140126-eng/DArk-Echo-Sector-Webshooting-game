@@ -5,7 +5,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 generateEnviroment();
-
+generateEnemies();
 function gameLoop(){
 
     drawEnviroment();
@@ -14,8 +14,9 @@ function gameLoop(){
 
     drawPlayer();
     aim_to();
-    renderBullets();
+    renderplayerBullets();
     console.log(rooms[0].walls.length);
+    drawEnemy();
     requestAnimationFrame(gameLoop);
 }
 

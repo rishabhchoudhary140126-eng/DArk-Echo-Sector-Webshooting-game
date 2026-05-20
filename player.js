@@ -14,7 +14,9 @@ function drawPlayer(){
 const player = { x: 30, 
     y: 30, 
     radius : gateSize/3,  
-    speed :1.5};
+    speed :1.5,
+    health : 100
+};
 
 let w_pressed = false;
 let a_pressed = false;
