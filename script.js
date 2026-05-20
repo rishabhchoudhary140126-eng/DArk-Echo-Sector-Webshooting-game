@@ -15,7 +15,7 @@ function gameLoop(){
     drawPlayer();
     aim_to();
     renderBullets();
-    
+    console.log(rooms[0].walls.length);
     requestAnimationFrame(gameLoop);
 }
 

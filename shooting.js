@@ -51,8 +51,9 @@ document.addEventListener("click", function(){
 
 
 function renderBullets(){
-    console.log(bullets.length);
+    //console.log(bullets.length);
     for(let i=0; i<bullets.length; i++){
+        
         if(bullets[i].no_of_colision <= 0 || bullets[i].x < 0 || bullets[i].x > canvas.width || bullets[i].y < 0 || bullets[i].y > canvas.height){
             bullets.splice(i,1);
             i--;
@@ -69,7 +70,7 @@ function renderBullets(){
 
 
 
-//
+                
 
                 if(bullets[i].x>=x1 && bullets[i].x<=x2 && Math.abs(bullets[i].y-y2) <=bullets[i].speed){
                     bullets[i].dy = bullets[i].dy*(-1);

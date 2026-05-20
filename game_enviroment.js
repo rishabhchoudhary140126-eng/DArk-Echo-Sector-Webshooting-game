@@ -39,7 +39,7 @@ function drawEnviroment(){
 function rectangle(room){
 
     // 1 = top, 2 = right, 3 = bottom, 4 = left
-
+    room.walls = [];
     const width = window.innerWidth / 14;
     const height = width;
     const gateSize = width/3;
