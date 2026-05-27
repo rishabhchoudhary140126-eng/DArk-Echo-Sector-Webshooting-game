@@ -26,7 +26,7 @@ function generateEnviroment(){
 
 function drawEnviroment(){
 
-    brush.fillStyle = "#C200D6";
+    brush.fillStyle = "#0F172A";
     brush.fillRect(0,0,canvas.width,canvas.height);
 
     for(let room of rooms){
@@ -48,17 +48,18 @@ function rectangle(room){
     const y = room.y;
     const door_dir = room.door_dir;
 
-    brush.fillStyle = "#0CD600";
+    brush.fillStyle = "#1E293B";
     brush.fillRect(x-width/2, y-height/2, width, height);
 
-    brush.strokeStyle = "black";
-    brush.lineWidth = 4;
+    
+    
 
     if(door_dir == 1){
 
         brush.beginPath();
         brush.moveTo(x-width/2, y-height/2);
         brush.lineTo(x-gateSize/2, y-height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -71,6 +72,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x+gateSize/2, y-height/2);
         brush.lineTo(x+width/2, y-height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x+gateSize/2,
@@ -83,6 +85,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y-height/2);
         brush.lineTo(x-width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -95,6 +98,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x+width/2, y-height/2);
         brush.lineTo(x+width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x+width/2,
@@ -107,6 +111,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y+height/2);
         brush.lineTo(x+width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -122,6 +127,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y-height/2);
         brush.lineTo(x+width/2, y-height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -134,6 +140,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y-height/2);
         brush.lineTo(x-width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -146,6 +153,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x+width/2, y-height/2);
         brush.lineTo(x+width/2, y-gateSize/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x+width/2,
@@ -158,6 +166,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x+width/2, y+gateSize/2);
         brush.lineTo(x+width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x+width/2,
@@ -170,6 +179,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y+height/2);
         brush.lineTo(x+width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -185,6 +195,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y-height/2);
         brush.lineTo(x+width/2, y-height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -197,6 +208,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y-height/2);
         brush.lineTo(x-width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -209,6 +221,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x+width/2, y-height/2);
         brush.lineTo(x+width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x+width/2,
@@ -221,6 +234,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y+height/2);
         brush.lineTo(x-gateSize/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -233,6 +247,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x+gateSize/2, y+height/2);
         brush.lineTo(x+width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 :x+gateSize/2,
@@ -248,6 +263,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y-height/2);
         brush.lineTo(x+width/2, y-height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -260,6 +276,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y-height/2);
         brush.lineTo(x-width/2, y-gateSize/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -272,6 +289,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y+gateSize/2);
         brush.lineTo(x-width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,
@@ -284,6 +302,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x+width/2, y-height/2);
         brush.lineTo(x+width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x+width/2,
@@ -296,6 +315,7 @@ function rectangle(room){
         brush.beginPath();
         brush.moveTo(x-width/2, y+height/2);
         brush.lineTo(x+width/2, y+height/2);
+        brush.strokeStyle = "#475569";
         brush.stroke();
         room.walls.push({
             x1 : x-width/2,

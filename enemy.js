@@ -23,19 +23,38 @@ function generateEnemies(){
         enemies.push ({
             x: enemyX,
             y:enemyY,
-            health: 100
+            health: 100,
+            room : i,
+            cooldown:1
 
         })
     }
 }
 function drawEnemy(){
+    console.log(enemies.length);
     for(let i=0; i<enemies.length; i++){
-        if(enemies[i].health<=0) continue;
+        if(enemies[i].health<=0) {
+            enemies.splice(i,1);
+            i--;
+            continue;
+
+        }
         brush.beginPath();
         brush.arc(enemies[i].x, enemies[i].y, 10, 0,  2*Math.PI);
-        brush.fillStyle = "#ff0000";
+        brush.fillStyle = "#F43F5E";
         brush.fill();
 
+        brush.fillStyle = "#334155";
+        brush.fillRect(enemies[i].x-15, enemies[i].y + 20 , 30, 5);
+
+
+    //health level
+        brush.fillStyle = "#FB7185";
+        brush.fillRect(enemies[i].x - 15, enemies[i].y + 20, (enemies[i].health/100)*30, 5);
+        // if(enemies[i].health<=0){
+        //     enemies.slice(i,1);
+        //     i--;
+        // }
 
         for(let j=0; j<playerBullets.length; j++){
             if(Math.abs(playerBullets[j].x - enemies[i].x) <= 10 && Math.abs(playerBullets[j].y - enemies[i].y) <=10) {

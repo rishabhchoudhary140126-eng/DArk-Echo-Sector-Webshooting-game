@@ -15,9 +15,23 @@ function gameLoop(){
     drawPlayer();
     aim_to();
     renderplayerBullets();
-    console.log(rooms[0].walls.length);
     drawEnemy();
-    requestAnimationFrame(gameLoop);
+    renderEnemyBullets();
+    if(player.health <= 0) {
+        alert("Game Over");
+
+        return;
+    }
+    else if(enemies.length <=0){
+        alert("You won, ALL ENEMIES ARE DEAD");
+        return;
+    }
+    else{
+        
+        requestAnimationFrame(gameLoop);
+
+    }
 }
 
 gameLoop();
+

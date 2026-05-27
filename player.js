@@ -5,8 +5,18 @@ function drawPlayer(){
     brush.beginPath();
 
     brush.arc(player.x, player.y, player.radius, 0, 2*Math.PI);
-    brush.fillStyle = "#C0D600";
+    brush.fillStyle = "#EAB308";
     brush.fill();
+
+    brush.fillStyle = "#334155";
+    brush.fillRect(player.x-15, player.y + 20 , 30, 5);
+
+
+    //health level
+    brush.fillStyle = "#22C55E";
+    brush.fillRect(player.x - 15, player.y + 20, (player.health/100)*30, 5);
+
+
 }
 
 
@@ -66,7 +76,8 @@ document.addEventListener("keyup", function(event){
 
 
 function movePlayer(){
-    
+    console.log(player.health);
+    if(player.health <=0) return;
     let upWallHit = false;
     let downWallHit = false;
     let leftWallHit = false;
@@ -115,4 +126,20 @@ function movePlayer(){
         if(player.x< window.innerWidth - player.radius && rightWallHit==false) player.x = player.x + player.speed;
     }
 
+}
+
+
+
+function currentRoomFinder(){
+    const width = window.innerWidth / 14;
+    for(let i=0; i<rooms.length; i++){
+        let x1 = rooms[i].x - width/2;
+        let x2 = rooms[i].x + width/2;
+        let y1 = rooms[i].y - width/2;
+        let y2 = rooms[i].y + width/2;
+        if((player.x>=x1 && player.x<=x2) && (player.y>=y1 && player.y<=y2)){
+            return i;
+            break;
+        }
+    }
 }
