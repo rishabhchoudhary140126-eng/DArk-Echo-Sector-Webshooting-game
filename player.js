@@ -115,7 +115,7 @@ function movePlayer(){
     }
 
     if(s_pressed){
-        if(player.y<window.innerHeight-player.radius && downWallHit==false) player.y = player.y + player.speed;
+        if(player.y<window.innerHeight - 40 -player.radius && downWallHit==false) player.y = player.y + player.speed;
     }
 
     if(a_pressed){

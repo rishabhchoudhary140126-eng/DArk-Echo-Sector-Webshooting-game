@@ -5,19 +5,19 @@ function generateEnemies(){
         let enemyY = 0;
         if(rooms[i].door_dir==1){
             enemyX = rooms[i].x + (window.innerWidth / 14)/3;
-            enemyY = rooms[i].y + (window.innerHeight / 14)/3;
+            enemyY = rooms[i].y + ((window.innerHeight - 40) / 14)/3;
         }
         else if(rooms[i].door_dir==2){
             enemyX = rooms[i].x - (window.innerWidth / 14)/3;
-            enemyY = rooms[i].y + (window.innerHeight / 14)/3;
+            enemyY = rooms[i].y + ((window.innerHeight - 40) / 14)/3;
         }
         else if(rooms[i].door_dir==3){
             enemyX = rooms[i].x - (window.innerWidth / 14)/3;
-            enemyY = rooms[i].y - (window.innerHeight / 14)/3;
+            enemyY = rooms[i].y - ((window.innerHeight - 40) / 14)/3;
         }
         else if(rooms[i].door_dir==4){
             enemyX = rooms[i].x + (window.innerWidth / 14)/3;
-            enemyY = rooms[i].y - (window.innerHeight / 14)/3;
+            enemyY = rooms[i].y - ((window.innerHeight - 40) / 14)/3;
         }
 
         enemies.push ({

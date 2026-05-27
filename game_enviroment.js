@@ -5,11 +5,11 @@ const rooms = [];
 function generateEnviroment(){
     //make rooms
     const gapX = window.innerWidth / 7;
-    const gapY = window.innerHeight / 5;
+    const gapY = (window.innerHeight -40) / 5;
 
 
     const startX = (window.innerWidth - 6*gapX)/2;
-    const startY = (window.innerHeight - 4*gapY)/2;
+    const startY = ((window.innerHeight - 40) - 4*gapY)/2;
     for(let i=0; i<7; i++){
         
         for(let j=0; j<5; j++){
@@ -327,3 +327,17 @@ function rectangle(room){
     }
 }
 
+
+
+
+function reset(){
+    rooms.length = 0;
+    enemies.length = 0;
+    playerBullets.length = 0;
+    enemyBullets.length = 0;
+    player.health = 100;
+    player.x = 30;
+    player.y = 30;
+    generateEnviroment();
+    generateEnemies();
+}
