@@ -1,4 +1,21 @@
-const canvas = document.getElementById("gamecanvas");
+const pause = document.getElementById("pausebtn");
+let paused = false;
+const score = document.getElementById("score");
+let playerScore = 0;
+pause.addEventListener("click" , function(){
+    paused = !paused;
+    if(paused){
+        pause.innerText = "Resume";
+    }
+    else{
+        pause.innerText = "Pause";
+        gameLoop();
+    }
+});
+
+
+
+
 const brush = canvas.getContext("2d");
 
 
@@ -21,6 +38,8 @@ function gameLoop(){
     renderplayerBullets();
     drawEnemy();
     renderEnemyBullets();
+    score.innerText = "Score: " + playerScore;
+
     if(player.health <= 0) {
         reset();
         alert("Game Over");
@@ -34,11 +53,26 @@ function gameLoop(){
     }
 
     else{
-        
-        requestAnimationFrame(gameLoop);
+        if(paused) return;
+        else requestAnimationFrame(gameLoop);
 
     }
 }
 
 gameLoop();
+
+
+
+
+
+const resetbtn = document.getElementById("resetbtn");
+resetbtn.addEventListener("click", function(){
+    reset();
+    paused = false;
+    pause.innerText = "Pause";
+    gameLoop();
+});
+
+
+
 

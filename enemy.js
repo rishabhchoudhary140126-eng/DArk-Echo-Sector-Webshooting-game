@@ -36,6 +36,7 @@ function drawEnemy(){
         if(enemies[i].health<=0) {
             enemies.splice(i,1);
             i--;
+            playerScore++;
             continue;
 
         }

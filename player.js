@@ -36,19 +36,19 @@ let d_pressed = false;
 
 document.addEventListener("keydown", function(event){
 
-    if(event.key == "w"){
+    if(event.key == "w" || event.key == "W"){
         w_pressed = true;
     }
 
-    if(event.key == "a"){
+    if(event.key == "a" || event.key == "A"){
         a_pressed = true;
     }
 
-    if(event.key == "s"){
+    if(event.key == "s" || event.key == "S"){
         s_pressed = true;
     }
 
-    if(event.key == "d"){
+    if(event.key == "d" || event.key == "D"){
         d_pressed = true;
     }
 
@@ -56,19 +56,19 @@ document.addEventListener("keydown", function(event){
 
 document.addEventListener("keyup", function(event){
 
-    if(event.key == "w"){
+    if(event.key == "w" || event.key == "W"){
         w_pressed = false;
     }
 
-    if(event.key == "a"){
+    if(event.key == "a" || event.key == "A"){
         a_pressed = false;
     }
 
-    if(event.key == "s"){
+    if(event.key == "s" || event.key == "S"){
         s_pressed = false;
     }
 
-    if(event.key == "d"){
+    if(event.key == "d" || event.key == "D"){
         d_pressed = false;
     }
 

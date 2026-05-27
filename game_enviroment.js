@@ -1,3 +1,5 @@
+const canvas = document.getElementById("gamecanvas");
+
 const rooms = [];
 
 
@@ -338,6 +340,7 @@ function reset(){
     player.health = 100;
     player.x = 30;
     player.y = 30;
+    playerScore = 0;
     generateEnviroment();
     generateEnemies();
 }

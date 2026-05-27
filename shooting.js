@@ -34,7 +34,7 @@ function aim_to(){
 
 const playerBullets = [];
 
-document.addEventListener("click", function(){
+canvas.addEventListener("click", function(){
 
     playerBullets.push({
 
