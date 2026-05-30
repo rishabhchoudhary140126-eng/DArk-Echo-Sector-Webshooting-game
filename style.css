@@ -18,8 +18,14 @@ body{
     box-sizing:border-box;
 }
 
-#gamecanvas{
-    display:block;
+#gamecanvas, #lightcanvas{
+    position:absolute;
+    left:0;
+    top:40px;
+}
+
+#lightcanvas {
+    pointer-events: none;
 }
 
 button {

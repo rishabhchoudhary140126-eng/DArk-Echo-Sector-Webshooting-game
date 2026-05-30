@@ -15,7 +15,6 @@ pause.addEventListener("click" , function(){
 
 
 
-
 const brush = canvas.getContext("2d");
 
 
@@ -38,6 +37,8 @@ function gameLoop(){
     renderplayerBullets();
     drawEnemy();
     renderEnemyBullets();
+    if(darkMode == true) clearcloud();
+    else lightctx.clearRect(0,0,lightcanvas.width,lightcanvas.height);
     score.innerText = "Score: " + playerScore;
 
     if(player.health <= 0) {
@@ -76,3 +77,4 @@ resetbtn.addEventListener("click", function(){
 
 
 
+console.log(gamecanvas.width, gamecanvas.height, lightcanvas.width, lightcanvas.height);

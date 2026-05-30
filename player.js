@@ -76,7 +76,7 @@ document.addEventListener("keyup", function(event){
 
 
 function movePlayer(){
-    console.log(player.health);
+    // console.log(player.health);
     if(player.health <=0) return;
     let upWallHit = false;
     let downWallHit = false;

@@ -31,7 +31,7 @@ function generateEnemies(){
     }
 }
 function drawEnemy(){
-    console.log(enemies.length);
+    // console.log(enemies.length);
     for(let i=0; i<enemies.length; i++){
         if(enemies[i].health<=0) {
             enemies.splice(i,1);
