@@ -37,6 +37,8 @@ function drawEnemy(){
             enemies.splice(i,1);
             i--;
             playerScore++;
+            enemydeath.currentTime = 0;
+            enemydeath.play();
             continue;
 
         }
@@ -62,6 +64,8 @@ function drawEnemy(){
                 enemies[i].health = enemies[i].health - 10;
                 playerBullets.splice(j,1);
                 j--;
+                enemydamage.currentTime = 0;
+                enemydamage.play();
             }
         }
     }

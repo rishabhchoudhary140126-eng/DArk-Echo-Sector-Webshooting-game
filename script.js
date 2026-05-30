@@ -3,6 +3,8 @@ let paused = false;
 const score = document.getElementById("score");
 let playerScore = 0;
 pause.addEventListener("click" , function(){
+    buttonsound.currentTime = 0;
+    buttonsound.play();
     paused = !paused;
     if(paused){
         pause.innerText = "Resume";
@@ -12,7 +14,25 @@ pause.addEventListener("click" , function(){
         gameLoop();
     }
 });
+document.addEventListener("keydown", function(event){
 
+    if(event.key === "Escape"){
+
+        paused = !paused;
+
+        if(paused){
+            pause.innerText = "Resume";
+        }
+        else{
+            pause.innerText = "Pause";
+            gameLoop();
+        }
+        buttonsound.currentTime = 0;
+        buttonsound.play();
+
+    }
+
+});
 
 
 const brush = canvas.getContext("2d");
@@ -71,8 +91,13 @@ resetbtn.addEventListener("click", function(){
     reset();
     paused = false;
     pause.innerText = "Pause";
+    buttonsound.currentTime = 0;
+    buttonsound.play();
     gameLoop();
 });
+
+
+
 
 
 

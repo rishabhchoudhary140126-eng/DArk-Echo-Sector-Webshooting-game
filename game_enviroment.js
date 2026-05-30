@@ -5,10 +5,10 @@ const canvas = document.getElementById("gamecanvas");
 
 
 const gunshot = new Audio("sounds/gunshot.mp3");
-const playerdamaged = new Audio("sounds/playerdamaged.mp3");
+const playerdamaged = new Audio("sounds/playerdamage.mp3");
 const enemydamage = new Audio("sounds/enemydamage.mp3");
-const enemydeath = new Audio("sounds/enemydeath.mp3");
-
+const enemydeath = new Audio("sounds/enemydeth.mp3");
+const buttonsound = new Audio("sounds/buttonsound.mp3");
 
 
 

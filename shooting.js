@@ -8,7 +8,7 @@ let dx=0;
 let dy=0;
 document.addEventListener("mousemove", function(event){
     mouse.x = event.x;
-    mouse.y = event.y
+    mouse.y = event.y - 40
 })
 // normalise (read more)
 function aim_to(){
@@ -184,6 +184,8 @@ function renderEnemyBullets(){
             enemyBullets.splice(i,1);
             i--;
             player.health -= 10;
+            playerdamaged.currentTime = 0;
+            playerdamaged.play();
             continue;
         }
 

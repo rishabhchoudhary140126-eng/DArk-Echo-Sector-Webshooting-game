@@ -16,14 +16,17 @@ lightcanvas.height = window.innerHeight - 40;
 
 
 
-let darkMode = true;
+let darkMode = false;
 document.addEventListener("keydown", function(event){
     console.log(event.key);
 
     if(event.key === "n" || event.key === "N"){
         darkMode = !darkMode;
         console.log(darkMode);
+        buttonsound.currentTime = 0;
+        buttonsound.play();
     }
+
 });
 
 
