@@ -1,5 +1,19 @@
 const canvas = document.getElementById("gamecanvas");
 
+
+//sounds
+
+
+const gunshot = new Audio("sounds/gunshot.mp3");
+const playerdamaged = new Audio("sounds/playerdamaged.mp3");
+const enemydamage = new Audio("sounds/enemydamage.mp3");
+const enemydeath = new Audio("sounds/enemydeath.mp3");
+
+
+
+
+
+
 const rooms = [];
 
 

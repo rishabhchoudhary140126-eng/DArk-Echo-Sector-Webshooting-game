@@ -49,6 +49,9 @@ canvas.addEventListener("click", function(){
 
     });
 
+    gunshot.currentTime = 0;
+    gunshot.play();
+
 });
 
 
